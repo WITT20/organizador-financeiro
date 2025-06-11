@@ -1,24 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Finanças Fácil</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="container">
         <h1>Finanças Fácil</h1>
         <div class="form">
-            <input type="text" id="desc" placeholder="Descrição">
-            <input type="number" id="value" placeholder="Valor (R$)">
+            <input type="date" id="data" />
+            <input type="text" id="desc" placeholder="Descrição" />
+            <input type="text" id="detalhe" placeholder="Detalhe (ex: de quem recebeu ou onde gastou)" />
+            <input type="number" id="value" placeholder="Valor (R$)" />
             <select id="type">
                 <option value="entrada">Entrada</option>
                 <option value="saida">Saída</option>
             </select>
+            <select id="categoria">
+                <option value="Alimentação">Alimentação</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Salário">Salário</option>
+                <option value="Outros">Outros</option>
+            </select>
+            <select id="banco">
+                <option value="Caixa">Caixa</option>
+                <option value="Banco do Brasil">Banco do Brasil</option>
+                <option value="Bradesco">Bradesco</option>
+                <option value="Itaú">Itaú</option>
+                <option value="Santander">Santander</option>
+                <option value="Outro">Outro</option>
+            </select>
             <button onclick="addTransacao()">Adicionar</button>
         </div>
+        <button id="toggleTema">Alternar Tema</button>
+        <input type="file" id="imgFundoInput" accept="image/*" />
         <h2>Saldo Atual: R$ <span id="saldo">0.00</span></h2>
         <ul id="historico"></ul>
     </div>
