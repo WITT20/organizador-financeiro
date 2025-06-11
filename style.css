@@ -17,22 +17,27 @@ h1 {
     text-align: center;
     color: #ba68c8;
 }
-.form input, .form select, .form button {
+.form input[type="date"], .form input[type="text"], .form input[type="number"], .form select {
     width: calc(100% - 22px);
     margin-bottom: 10px;
     padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-}
-.form input, .form select {
     background-color: #2a2a2a;
     color: #fff;
 }
 .form button {
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
     background-color: #8e24aa;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 .form button:hover {
     background-color: #ab47bc;
@@ -46,4 +51,27 @@ li {
     margin-bottom: 8px;
     padding: 10px;
     border-left: 5px solid #4a148c;
+}
+body.claro {
+    background-color: #f0f0f0;
+    color: #121212;
+}
+body.claro .container {
+    background-color: #fff;
+    color: #121212;
+    box-shadow: 0 0 10px #8e24aa;
+}
+body.claro .form input, 
+body.claro .form select {
+    background-color: #fff;
+    color: #121212;
+}
+body.claro .form button {
+    background-color: #8e24aa;
+    color: #fff;
+}
+body.claro ul li {
+    background-color: #eee;
+    color: #121212;
+    border-left: 5px solid #8e24aa;
 }
